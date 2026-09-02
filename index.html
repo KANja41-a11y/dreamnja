@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dreamverse ✦ Your Story</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       BACKGROUND
+  ========================== -->
+
+  <div class="stars"></div>
+  <div class="moon"></div>
+
+
+  <!-- =========================
+       TOP BAR
+  ========================== -->
+
+  <header class="topbar">
+
+    <div class="logo">
+      <div class="logo-symbol">✦</div>
+
+      <div>
+        <h1>Dreamverse</h1>
+        <p>your story, your world</p>
+      </div>
+    </div>
+
+
+    <div class="top-info">
+
+      <div class="resource">
+        <span>🪙</span>
+        <strong id="coins">350</strong>
+      </div>
+
+      <div class="resource">
+        <span>⭐</span>
+        <strong id="level">1</strong>
+      </div>
+
+      <button id="saveButton" class="save-button">
+        💾
+      </button>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================
+       MAIN LAYOUT
+  ========================== -->
+
+  <main class="app">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+      <div class="character-card">
+
+        <div class="character-avatar" id="characterAvatar">
+          🌙
+        </div>
+
+        <div class="character-info">
+
+          <span>Dreamer</span>
+
+          <h2 id="characterName">
+            Nova
+          </h2>
+
+          <small id="personalityText">
+            Kind Soul
+          </small>
+
+        </div>
+
+      </div>
+
+
+      <!-- STATS -->
+
+      <div class="stats-card">
+
+        <div class="stat-line">
+
+          <div>
+            <span>❤️ Happiness</span>
+          </div>
+
+          <strong id="happiness">
+            80
+          </strong>
+
+        </div>
+
+        <div class="progress">
+          <div id="happinessBar"></div>
+        </div>
+
+
+        <div class="stat-line">
+
+          <div>
+            <span>⚡ Energy</span>
+          </div>
+
+          <strong id="energy">
+            100
+          </strong>
+
+        </div>
+
+        <div class="progress">
+          <div id="energyBar"></div>
+        </div>
+
+
+        <div class="stat-line">
+
+          <div>
+            <span>✨ Dream XP</span>
+          </div>
+
+          <strong id="xp">
+            0
+          </strong>
+
+        </div>
+
+        <div class="progress">
+          <div id="xpBar"></div>
+        </div>
+
+      </div>
+
+
+      <!-- NAVIGATION -->
+
+      <nav class="side-nav">
+
+        <button class="nav-button active" data-page="home">
+          <span>🏠</span>
+          Home
+        </button>
+
+        <button class="nav-button" data-page="explore">
+          <span>🗺️</span>
+          Explore
+        </button>
+
+        <button class="nav-button" data-page="friends">
+          <span>💕</span>
+          Friends
+        </button>
+
+        <button class="nav-button" data-page="journal">
+          <span>📖</span>
+          Dream Log
+        </button>
+
+        <button class="nav-button" data-page="achievements">
+          <span>🏆</span>
+          Achievements
+        </button>
+
+      </nav>
+
+
+      <div class="day-card">
+
+        <span class="eyebrow">
+          LUNARIA
+        </span>
+
+        <strong id="dayText">
+          Day 1
+        </strong>
+
+        <span id="timeText">
+          Evening
+        </span>
+
+      </div>
+
+    </aside>
+
+
+
+    <!-- CONTENT -->
+
+    <section class="content">
+
+
+      <!-- =========================
+           HOME
+      ========================== -->
+
+      <section class="page active" id="homePage">
+
+        <div class="welcome">
+
+          <div>
+
+            <span class="eyebrow">
+              WELCOME BACK, DREAMER
+            </span>
+
+            <h2 id="welcomeTitle">
+              Good evening, Nova ✦
+            </h2>
+
+            <p>
+              Every little choice creates a different story.
+            </p>
+
+          </div>
+
+          <div class="weather">
+            🌙
+          </div>
+
+        </div>
+
+
+        <!-- STORY CARD -->
+
+        <div class="story-card">
+
+          <div class="story-decoration">
+            ✦
+          </div>
+
+          <span class="eyebrow">
+            STORY EVENT
+          </span>
+
+          <h2>
+            The Mysterious Letter
+          </h2>
+
+          <p id="storyText">
+            When you return home, you notice a small silver
+            envelope resting beneath your door.
+          </p>
+
+
+          <div class="choice-list">
+
+            <button class="choice-button" data-choice="open">
+              <span>✉️</span>
+
+              <div>
+                <strong>Open the letter</strong>
+                <small>Maybe it's important...</small>
+              </div>
+
+            </button>
+
+
+            <button class="choice-button" data-choice="ignore">
+              <span>🚶</span>
+
+              <div>
+                <strong>Leave it for tomorrow</strong>
+                <small>Some mysteries can wait.</small>
+              </div>
+
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- QUICK ACTIONS -->
+
+        <div class="section-heading">
+
+          <div>
+            <span class="eyebrow">
+              YOUR DAY
+            </span>
+
+            <h3>
+              What do you want to do?
+            </h3>
+          </div>
+
+        </div>
+
+
+        <div class="action-grid">
+
+          <button class="action-card" data-action="cafe">
+
+            <div class="action-icon">
+              ☕
+            </div>
+
+            <div>
+              <strong>Visit Café</strong>
+              <span>Relax & meet people</span>
+            </div>
+
+            <b>+❤️</b>
+
+          </button>
+
+
+          <button class="action-card" data-action="library">
+
+            <div class="action-icon">
+              📚
+            </div>
+
+            <div>
+              <strong>Study</strong>
+              <span>Gain Dream XP</span>
+            </div>
+
+            <b>+⭐</b>
+
+          </button>
+
+
+          <button class="action-card" data-action="park">
+
+            <div class="action-icon">
+              🌸
+            </div>
+
+            <div>
+              <strong>Go to Park</strong>
+              <span>Recover energy</span>
+            </div>
+
+            <b>+⚡</b>
+
+          </button>
+
+
+          <button class="action-card" data-action="art">
+
+            <div class="action-icon">
+              🎨
+            </div>
+
+            <div>
+              <strong>Create Art</strong>
+              <span>Express yourself</span>
+            </div>
+
+            <b>+✨</b>
+
+          </button>
+
+        </div>
+
+
+        <!-- QUEST -->
+
+        <div class="quest-preview">
+
+          <div class="quest-icon">
+            ✨
+          </div>
+
+          <div>
+
+            <span class="eyebrow">
+              DAILY QUEST
+            </span>
+
+            <h3>
+              Make Today Beautiful
+            </h3>
+
+            <p>
+              Complete 2 activities today.
+            </p>
+
+            <div class="quest-progress">
+              <div id="questBar"></div>
+            </div>
+
+          </div>
+
+          <strong id="questCount">
+            0 / 2
+          </strong>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =========================
+           EXPLORE
+      ========================== -->
+
+      <section class="page" id="explorePage">
+
+        <div class="page-heading">
+
+          <span class="eyebrow">
+            DISCOVER
+          </span>
+
+          <h2>
+            Explore Lunaria
+          </h2>
+
+          <p>
+            There is always something waiting around the corner.
+          </p>
+
+        </div>
+
+
+        <div class="location-grid">
+
+          <button class="location-card" data-location="cafe">
+
+            <div class="location-image cafe-bg">
+              ☕
+            </div>
+
+            <div class="location-info">
+
+              <span>01</span>
+
+              <h3>
+                Moon Café
+              </h3>
+
+              <p>
+                A cozy café filled with familiar faces.
+              </p>
+
+              <b>
+                Explore →
+              </b>
+
+            </div>
+
+          </button>
+
+
+          <button class="location-card" data-location="forest">
+
+            <div class="location-image forest-bg">
+              🌲
+            </div>
+
+            <div class="location-info">
+
+              <span>02</span>
+
+              <h3>
+                Whisper Forest
+              </h3>
+
+              <p>
+                Strange sounds echo between the trees.
+              </p>
+
+              <b>
+                Explore →
+              </b>
+
+            </div>
+
+          </button>
+
+
+          <button class="location-card" data-location="academy">
+
+            <div class="location-image academy-bg">
+              🏫
+            </div>
+
+            <div class="location-info">
+
+              <span>03</span>
+
+              <h3>
+                Dream Academy
+              </h3>
+
+              <p>
+                Learn something new every day.
+              </p>
+
+              <b>
+                Explore →
+              </b>
+
+            </div>
+
+          </button>
+
+
+          <button class="location-card locked">
+
+            <div class="location-image beach-bg">
+              🏖️
+
+              <div class="lock">
+                🔒
+              </div>
+
+            </div>
+
+            <div class="location-info">
+
+              <span>04</span>
+
+              <h3>
+                Dream Beach
+              </h3>
+
+              <p>
+                Unlock at level 5.
+              </p>
+
+            </div>
+
+          </button>
+
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =========================
+           FRIENDS
+      ========================== -->
+
+      <section class="page" id="friendsPage">
+
+        <div class="page-heading">
+
+          <span class="eyebrow">
+            CONNECTIONS
+          </span>
+
+          <h2>
+            People of Lunaria
+          </h2>
+
+          <p>
+            Maybe some strangers will become important to you.
+          </p>
+
+        </div>
+
+
+        <div class="friends-grid">
+
+
+          <article class="friend-card">
+
+            <div class="friend-avatar aeri">
+              🌙
+            </div>
+
+            <div class="friend-info">
+
+              <div class="friend-name">
+
+                <div>
+                  <h3>
+                    Aeri
+                  </h3>
+
+                  <span>
+                    Quiet · Kind · Mysterious
+                  </span>
+                </div>
+
+                <b>
+                  💜
+                </b>
+
+              </div>
+
+              <div class="friend-bar">
+                <div id="aeriBar"></div>
+              </div>
+
+              <p id="aeriFriendship">
+                Friendship 10 / 100
+              </p>
+
+              <button class="talk-button" data-friend="aeri">
+                💬 Talk
+              </button>
+
+            </div>
+
+          </article>
+
+
+
+          <article class="friend-card">
+
+            <div class="friend-avatar leo">
+              ☀️
+            </div>
+
+            <div class="friend-info">
+
+              <div class="friend-name">
+
+                <div>
+                  <h3>
+                    Leo
+                  </h3>
+
+                  <span>
+                    Funny · Energetic · Chaotic
+                  </span>
+                </div>
+
+                <b>
+                  💛
+                </b>
+
+              </div>
+
+              <div class="friend-bar">
+                <div id="leoBar"></div>
+              </div>
+
+              <p id="leoFriendship">
+                Friendship 5 / 100
+              </p>
+
+              <button class="talk-button" data-friend="leo">
+                💬 Talk
+              </button>
+
+            </div>
+
+          </article>
+
+
+
+          <article class="friend-card">
+
+            <div class="friend-avatar mira">
+              🌸
+            </div>
+
+            <div class="friend-info">
+
+              <div class="friend-name">
+
+                <div>
+                  <h3>
+                    Mira
+                  </h3>
+
+                  <span>
+                    Elegant · Creative · Friendly
+                  </span>
+                </div>
+
+                <b>
+                  💗
+                </b>
+
+              </div>
+
+              <div class="friend-bar">
+                <div id="miraBar"></div>
+              </div>
+
+              <p id="miraFriendship">
+                Friendship 0 / 100
+              </p>
+
+              <button class="talk-button" data-friend="mira">
+                💬 Talk
+              </button>
+
+            </div>
+
+          </article>
+
+
+
+          <article class="friend-card">
+
+            <div class="friend-avatar kael">
+              🖤
+            </div>
+
+            <div class="friend-info">
+
+              <div class="friend-name">
+
+                <div>
+                  <h3>
+                    Kael
+                  </h3>
+
+                  <span>
+                    Cold · Smart · Secretive
+                  </span>
+                </div>
+
+                <b>
+                  🖤
+                </b>
+
+              </div>
+
+              <div class="friend-bar">
+                <div id="kaelBar"></div>
+              </div>
+
+              <p id="kaelFriendship">
+                Friendship 0 / 100
+              </p>
+
+              <button class="talk-button" data-friend="kael">
+                💬 Talk
+              </button>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =========================
+           JOURNAL
+      ========================== -->
+
+      <section class="page" id="journalPage">
+
+        <div class="page-heading">
+
+          <span class="eyebrow">
+            MEMORIES
+          </span>
+
+          <h2>
+            Dream Log
+          </h2>
+
+          <p>
+            Every choice becomes a little part of your story.
+          </p>
+
+        </div>
+
+
+        <div class="journal" id="journalList">
+        </div>
+
+      </section>
+
+
+
+      <!-- =========================
+           ACHIEVEMENTS
+      ========================== -->
+
+      <section class="page" id="achievementsPage">
+
+        <div class="page-heading">
+
+          <span class="eyebrow">
+            MILESTONES
+          </span>
+
+          <h2>
+            Achievements
+          </h2>
+
+          <p>
+            Little things become big memories.
+          </p>
+
+        </div>
+
+
+        <div class="achievement-grid" id="achievementList">
+        </div>
+
+      </section>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================
+       DIALOGUE MODAL
+  ========================== -->
+
+  <div class="modal-overlay" id="dialogueModal">
+
+    <div class="dialogue-modal">
+
+      <button class="modal-close" id="closeDialogue">
+        ×
+      </button>
+
+      <div class="dialogue-character" id="dialogueAvatar">
+        🌙
+      </div>
+
+      <span class="eyebrow" id="dialogueName">
+        AERI
+      </span>
+
+      <h2 id="dialogueTitle">
+        A quiet evening...
+      </h2>
+
+      <p id="dialogueText">
+      </p>
+
+      <button class="primary-button" id="dialogueContinue">
+        Continue ✦
+      </button>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================
+       TOAST
+  ========================== -->
+
+  <div class="toast" id="toast">
+
+    <span id="toastIcon">
+      ✨
+    </span>
+
+    <span id="toastText">
+      Welcome to Dreamverse!
+    </span>
+
+  </div>
+
+
+
+  <!-- MOBILE NAV -->
+
+  <nav class="mobile-nav">
+
+    <button data-page="home" class="active">
+      🏠
+      <span>Home</span>
+    </button>
+
+    <button data-page="explore">
+      🗺️
+      <span>Explore</span>
+    </button>
+
+    <button data-page="friends">
+      💕
+      <span>Friends</span>
+    </button>
+
+    <button data-page="journal">
+      📖
+      <span>Log</span>
+    </button>
+
+    <button data-page="achievements">
+      🏆
+      <span>Badges</span>
+    </button>
+
+  </nav>
+
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
